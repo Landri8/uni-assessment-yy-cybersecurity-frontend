@@ -1,0 +1,26 @@
+@import url('./css/component.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Antic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/public/fonts/Antic-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Pinyon';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/public/fonts/PinyonScript-Regular.ttf);
+}   
