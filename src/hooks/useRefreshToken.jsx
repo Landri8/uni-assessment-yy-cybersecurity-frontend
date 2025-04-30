@@ -43,7 +43,7 @@ const useRefreshToken = () => {
             setIsFetching(false);
 
             if (data?.statuscode === 200) {
-                Cookies.set("refresh_token", data?.refresh_token)
+                // Cookies.set("refresh_token", data?.refresh_token)
                 Cookies.set("access_token", data?.access_token)
 
                 callback();

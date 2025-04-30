@@ -4,7 +4,7 @@ import Cookies from "js-cookie"
 
 export const getRequest = (url) => {
     const apiUrl = import.meta.env.VITE_API_URL + url;
-    const token = Cookies.get('auth')
+    const token = Cookies.get('access_token')
 
     return axios.get(apiUrl, {
         headers: {
