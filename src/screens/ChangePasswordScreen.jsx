@@ -134,7 +134,7 @@ const ChangePasswordScreen = () => {
                     toast.success('Password changed successfully')
                     navigator('/')
                 } else if (data?.statuscode == 405) {
-                    const can_change_date = convertYYYYMMDDHHmmToReadable(data.date)
+                    const can_change_date = convertYYYYMMDDHHmmToReadable(data?.allowed_after)
                     toast.error("Password change limit exceeded. You can change password after " + can_change_date)
                     clearForm()
                 } else if (data?.statuscode == 403) {

@@ -36,7 +36,7 @@ const PhoneVerificationScreen = () => {
         postRequest('/verify_otp', requestBody).then(({data}) => {
             toast.dismiss()
             if (data?.statuscode == 200) {
-                toast.success('Phone number verified')
+                toast.success('Account created successfully')
 
                 navigator('/login')
                 console.log(data)

@@ -136,6 +136,8 @@ const ProfileScreen = () => {
                 dispatch(clearSession())
                 Cookies.remove('access_token')
                 Cookies.remove('refresh_token')
+
+                toast.success('Account deleted')
                 navigator('/signup');
             } else if (data?.statuscode === 400) {
                 toast.error(data.message)
