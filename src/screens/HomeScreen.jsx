@@ -173,7 +173,7 @@ const HomeScreen = () => {
                               </span>
                           </div>
                           <p className="mt-2 text-3xl font-semibold text-white">Complete</p>
-                          <p className="mt-1 text-sm text-gray-400">Email & Phone verified</p>
+                          <p className="mt-1 text-sm text-gray-400">Email verified</p>
                       </div>
                   </div>
                   

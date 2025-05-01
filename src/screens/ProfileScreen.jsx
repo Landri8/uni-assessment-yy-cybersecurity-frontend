@@ -15,12 +15,10 @@ const ProfileScreen = () => {
     const {
         username,
         email,
-        phone
     } = useSelector(state => state.user)
 
     const usernameInputRef = useRef()
     const emailInputRef = useRef()
-    const phoneInputRef = useRef()
 
     const navigator = useNavigate();
     const dispatch = useDispatch();
@@ -116,7 +114,6 @@ const ProfileScreen = () => {
     const handleCancelEdit = () => {
         usernameInputRef.current.value = username;
         emailInputRef.current.value = email;
-        phoneInputRef.current.value = phone;
 
         setEditMode(false)
     }
@@ -164,7 +161,6 @@ const ProfileScreen = () => {
     useEffect(() => {
         usernameInputRef.current.value = username;
         emailInputRef.current.value = email;
-        phoneInputRef.current.value = phone;
     }, [])
 
     return (
@@ -256,22 +252,6 @@ const ProfileScreen = () => {
                                         disabled
                                         type="email" 
                                         id="email" 
-                                        className="block w-full rounded-xl border border-gray-700 bg-gray-700/50 py-3 px-4 text-gray-300"
-                                    />
-                                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                        <span className="text-xs font-medium text-green-300 bg-green-900/30 rounded-full py-0.5 px-2 border border-green-800/30">Verified</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="phone_number" className="block text-sm font-medium text-gray-300 mb-1.5">Phone Number</label>
-                                <div className="relative">
-                                    <input 
-                                        ref={phoneInputRef}
-                                        disabled
-                                        type="text" 
-                                        id="phone_number" 
                                         className="block w-full rounded-xl border border-gray-700 bg-gray-700/50 py-3 px-4 text-gray-300"
                                     />
                                     <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
